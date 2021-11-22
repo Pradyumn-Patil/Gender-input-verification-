@@ -1,47 +1,31 @@
- [![PyPI](https://img.shields.io/pypi/v/cvlib.svg?color=blue)](https://pypi.org/project/cvlib/)
 
-A simple, high level, easy-to-use open source Computer Vision library for Python.
+ Computer Vision code for gender and Age detection in Python.
 
-## Installation
+## How to Installation
 
 ### Installing dependencies
 
-Provided the below python packages are installed, cvlib is completely pip installable.
+packages needed , other wise  cvlib is completely pip installable.
 
-* OpenCV
-* TensorFlow
+* OpenCV and * TensorFlow
 
-If you don't have them already installed, you can install through pip
+use the following command 
 
 `pip install opencv-python tensorflow` 
+ 
+#### For Gpu optimization use :-
+Install `tensorflow-gpu` package through `pip`. Nvidia drivers required  (CUDA ToolKit, CuDNN etc). 
 
-#### Optional
-or you can compile them from source if you want to enable optimizations for your specific hardware for better performance.
-If you are working with GPU, you can install `tensorflow-gpu` package through `pip`. Make sure you have the necessary Nvidia drivers  installed preoperly (CUDA ToolKit, CuDNN etc). 
+ by default cpu-only `tensorflow` package.
 
-If you are not sure, just go with the cpu-only `tensorflow` package.
-
-You can also compile OpenCV from source to enable CUDA optimizations for Nvidia GPU.
-
-### Installing cvlib
+### Installing main components 
 
 `pip install cvlib`
 
-To upgrade to the newest version
-`pip install --upgrade cvlib`
-
-#### Optional
-If you want to build cvlib from source, clone this repository and run the below commands.
-```
-git clone https://github.com/arunponnusamy/cvlib.git
-cd cvlib
-pip install .
-```
-
-**Note: Compatability with Python 2.x is not officially tested.**
 
 ## Face detection
-Detecting faces in an image is as simple as just calling the function `detect_face()`. It will return the bounding box corners and corresponding confidence for all the faces detected.
+Detecting faces in an image done by calling the function `detect_face()`. 
+return values will be  bounding box corners and  probability of the prediction  for all the faces detected.
 ### Example :
 
 ```python
@@ -147,35 +131,10 @@ Optionally you can pass in a directory path to save all the frames to disk.
 frames = cv.get_frames('~/Downloads/demo.mp4', '~/Downloads/demo_frames/')
 ```
 
-### Creating gif
+### Creating gif(for less memory isage and faster processing time)
 `animate( )` method lets you create gif from a list of images. Just pass a list of images or path to a directory containing images and output gif name as arguments to the method, it will create a gif out of the images and save it to disk for you.
 
 ```python
 cv.animate(frames, '~/Documents/frames.gif')
-```
-
-## Sponsor
-Developing and maintaining open source projects takes a lot of time and effort. If you are getting value out of this project, consider supporting my work by simply [buying me a coffee](https://buymeacoffee.com/arunponnusamy) (one time or every month).
-
-## License
-cvlib is released under MIT license.
-
-## Help
-For bugs and feature requests, feel free to file a [GitHub issue](https://github.com/arunponnusamy/cvlib/issues). (Make sure to check whether the issue has been filed already) 
-
-For usage related how-to questions, please create a new question on [StackOverflow](https://stackoverflow.com/questions/tagged/cvlib) with the tag `cvlib`.
-
-## Community
-Join the official [Discord Server](https://discord.gg/CHHQJZGWfh) or [GitHub Discussions](https://github.com/arunponnusamy/cvlib/discussions) to talk about all things cvlib.
-
-## Citation
-If you find cvlib helpful in your work, please cite the following
-```BibTex
-@misc{ar2018cvlib,
-  author =       {Arun Ponnusamy},
-  title =        {cvlib - high level Computer Vision library for Python},
-  howpublished = {\url{https://github.com/arunponnusamy/cvlib}},
-  year =         {2018}
-}
 ```
 
