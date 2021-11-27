@@ -1,4 +1,4 @@
-
+# updated to take info from excel and check corrosponding image for input verification.
 import cv2
 import cvlib as cv
 import sys
