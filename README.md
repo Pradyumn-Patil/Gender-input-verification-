@@ -1,3 +1,8 @@
+ #open cvlib ------> example  ------ > use the updated gender detection.py to verify the input gender(stored in excel) and predicted gender 
+ #also creates new excel for the mismatched for easy error detection.
+ 
+ follow bellow steps to install and work with the other funtions.
+ 
 
  Computer Vision code for gender and Age detection in Python.
 
